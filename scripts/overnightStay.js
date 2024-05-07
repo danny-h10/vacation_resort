@@ -38,9 +38,9 @@ function estimateStay(event) {
     let totalDue = stayRate - discountRate + tax;
 
     let message = `
-<div>The room cost: $${stayRate}</div>
-<div>the discount: $${discountRate}</div>
-<div>The room after discount: $${discountedRoom}</div>
+<div>The room cost: $${stayRate.toFixed(2)}</div>
+<div>the discount: $${discountRate.toFixed(2)}</div>
+<div>The room after discount: $${discountedRoom.toFixed(2)}</div>
 <div>Tax: $${tax.toFixed(2)}</div>
 <div>The total: ${totalDue.toFixed(2)}</div>
 `
