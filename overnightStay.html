@@ -34,9 +34,15 @@
 
         <form id="estimateStayForm">
           <div class="mb-3">
-            <label for="fullName">Your name: </label>
-            <input type="text" name="fullName" id="fullName" required>
-          </div>
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form1Example1" class="form-control" />
+              <label class="form-label" for="form1Example1">Email address</label>
+            </div>
+          
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="name" id="form1Example2" class="form-control" />
+              <label class="form-label" for="form1Example2">Name</label>
+            </div>
           <div class="mb-3">
             <label for="checkInDate">Check-in Date: </label>
             <input type="date" name="checkInDate" id="checkInDate" required>
