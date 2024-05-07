@@ -12,6 +12,9 @@ function estimateStay (event){
 
 let theStay = event.target
 
+let thedate = event.target
+
+
 let stayRate = 150 * Number(theStay.numberOfNights.value)
 
 let getRoomRate = 0;
@@ -37,11 +40,11 @@ let tax = stayRate * (12/100)
 let totalDue = stayRate - discountRate + tax;
 
 let message = `
-<div>The room cost: ${stayRate}</div>
-<div>the discount: ${discountRate}</div>
-<div>The room after discount: ${discountedRoom}</div>
-<div>Tax: ${tax.toFixed(2)}</div>
-<div>The total: ${totalDue.toFixed(2)}</div>
+<div>The room cost: $${stayRate}</div>
+<div>the discount: $${discountRate}</div>
+<div>The room after discount: $${discountedRoom}</div>
+<div>Tax: $${tax.toFixed(2)}</div>
+<div>The total: $${totalDue.toFixed(2)}</div>
 `
 
 document.querySelector("#results").innerHTML = message
