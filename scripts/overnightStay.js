@@ -15,11 +15,19 @@ let theStay = event.target
 let thedate = event.target
 
 
-let stayRate = 150 * Number(theStay.numberOfNights.value)
+let stayRate =  Number(theStay.numberOfNights.value) * getRoomRate(theStay.roomType.value)
 
-let getRoomRate = 0;
-if(theStay.suite.value === "suite"){
-    getRoomRate = stayRate + 60;
+function getRoomRate(roomType){
+
+    //logic goes here to determine the room rate based on the check-in date and room type
+    //for now just return 150
+
+    if(roomType === "suite"){
+        return 250;
+    }
+
+    return 150;
+
 }
 
 let discountRate = 0;
@@ -44,7 +52,7 @@ let message = `
 <div>the discount: $${discountRate}</div>
 <div>The room after discount: $${discountedRoom}</div>
 <div>Tax: $${tax.toFixed(2)}</div>
-<div>The total: $${totalDue.toFixed(2)}</div>
+<div>The total: ${totalDue.toFixed(2)}</div>
 `
 
 document.querySelector("#results").innerHTML = message
